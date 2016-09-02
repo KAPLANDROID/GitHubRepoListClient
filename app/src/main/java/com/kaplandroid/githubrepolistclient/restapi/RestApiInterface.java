@@ -17,8 +17,8 @@ public interface RestApiInterface {
     @GET("users/{user}/repos")
     Call<ArrayList<RepoInfo>> getUserRepoList(@Path("user") String user,
                                               @Query("type") String type,
-                                              @Query("page") String page,
-                                              @Query("per_page") String perPage);
+                                              @Query("page") int page,
+                                              @Query("per_page") int perPage);
 
 
 }
