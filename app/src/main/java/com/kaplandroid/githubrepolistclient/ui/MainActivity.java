@@ -137,6 +137,8 @@ public class MainActivity extends Activity implements ShakeDetector.Listener {
                         rvRepoList.setLayoutManager(mLayoutManager);
                         rvRepoList.setItemAnimator(new DefaultItemAnimator());
                         rvRepoList.setAdapter(repoInfoListAdapter);
+
+                        /** this listener added to support Endless scroll */
                         onRVScrollListener = new EndlessRecyclerViewScrollListener(mLayoutManager, page) {
 
                             @Override
